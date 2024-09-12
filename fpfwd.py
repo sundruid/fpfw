@@ -11,9 +11,9 @@ from datetime import datetime
 
 # Configuration
 PART_FILE_DIRECTORY = "/home/admin/muonfp/fingerprints/"  # Directory containing the .part files
-LOG_FILE = "fpfwd.log"  # Log file for script activity
+LOG_FILE = "/home/admin/muonfp/fpfw/fpfwd.log"  # Log file for script activity
 POLL_INTERVAL = 60  # Polling interval in seconds
-DATABASE_FILE = "fpfwd.db"  # SQLite database file
+DATABASE_FILE = "/home/admin/muonfp/fpfw/fpfwd.db"  # SQLite database file
 
 # Set up logging
 logging.basicConfig(filename=LOG_FILE, level=logging.INFO, format='%(asctime)s - %(message)s')
@@ -129,7 +129,7 @@ def process_fingerprint_removals():
 
         for (fingerprint,) in removals:
             logging.info(f"Processing removal for fingerprint: {fingerprint}")
-            
+
             # Remove the fingerprint entry
             cursor.execute("DELETE FROM fingerprints WHERE fingerprint = ?", (fingerprint,))
             conn.commit()
