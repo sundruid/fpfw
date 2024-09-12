@@ -111,3 +111,7 @@ Contributions are welcome! Please fork the repository and submit a pull request 
 ## Support
 
 If you encounter any issues or have questions, please open an issue on the GitHub repository.
+
+## Requires MuonFP for fingerprinting
+
+![muonfp_logo](https://github.com/user-attachments/assets/ec3a4b97-ddd0-4b12-b6bd-d02954d46c64)
